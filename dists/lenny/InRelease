@@ -5,7 +5,7 @@ Origin: Daniil Gentili <daniil.gentili.dg@gmail.com>
 Label: Repo by Daniil Gentili
 Suite: stable
 Codename: lenny
-Date: Thu, 30 Jul 2015 10:13:53 UTC
+Date: Mon, 03 Aug 2015 13:20:51 UTC
 Architectures: i386 amd64 armhf armel arm mips mipsel kfreebsd-amd64 kfreebsd-i386 iphoneos-arm
 Components: main
 Description: Repo for packages created by Daniil Gentili.
@@ -16,8 +16,8 @@ MD5Sum:
  9e02778f1e6ce0fb22a40815cf020261 2534 main/binary-amd64/Packages
  bc05776d386cf7b4172aef12c7560f02 1113 main/binary-amd64/Packages.gz
  89e7b412c768c8fef4ff3b5144a99b40 193 main/binary-amd64/Release
- 9e02778f1e6ce0fb22a40815cf020261 2534 main/binary-armhf/Packages
- bc05776d386cf7b4172aef12c7560f02 1113 main/binary-armhf/Packages.gz
+ d0ee4bd9b13b8bffe811b5c9a6017bc3 9227 main/binary-armhf/Packages
+ 3c7e07a2f718ef949ef5d0a55afaf457 2369 main/binary-armhf/Packages.gz
  41b097f3f6d3d7a2f354dabe2a7ea40f 193 main/binary-armhf/Release
  9e02778f1e6ce0fb22a40815cf020261 2534 main/binary-armel/Packages
  bc05776d386cf7b4172aef12c7560f02 1113 main/binary-armel/Packages.gz
@@ -50,8 +50,8 @@ SHA1:
  d9e12259e2c6bd0f5801f1aee22bcea0e6e04187 2534 main/binary-amd64/Packages
  84f714c771e011cacb79c0b228523322502b545e 1113 main/binary-amd64/Packages.gz
  76a9564aaf57b2ecbfe76c44891f67d26511dbe4 193 main/binary-amd64/Release
- d9e12259e2c6bd0f5801f1aee22bcea0e6e04187 2534 main/binary-armhf/Packages
- 84f714c771e011cacb79c0b228523322502b545e 1113 main/binary-armhf/Packages.gz
+ 197a3150825a210904d837a3fe40121595deac75 9227 main/binary-armhf/Packages
+ 14f027c30606d7a151d7dd768602ade33f012199 2369 main/binary-armhf/Packages.gz
  4cc27b6bc4717fa217a429df096840345df7a16f 193 main/binary-armhf/Release
  d9e12259e2c6bd0f5801f1aee22bcea0e6e04187 2534 main/binary-armel/Packages
  84f714c771e011cacb79c0b228523322502b545e 1113 main/binary-armel/Packages.gz
@@ -84,8 +84,8 @@ SHA256:
  c208c3dffb797b4104abf212f00f5568b90fa79eb42ee3b38a2aa9714ff42783 2534 main/binary-amd64/Packages
  4ccd49104f6db2920d2aa0cc925f1a4522a821527e38e5d71c231127995f40ac 1113 main/binary-amd64/Packages.gz
  b3f2b6ca0551a08f7068a030232e80c8d40c2f097c05d8e2ffd1f0996aa047ad 193 main/binary-amd64/Release
- c208c3dffb797b4104abf212f00f5568b90fa79eb42ee3b38a2aa9714ff42783 2534 main/binary-armhf/Packages
- 4ccd49104f6db2920d2aa0cc925f1a4522a821527e38e5d71c231127995f40ac 1113 main/binary-armhf/Packages.gz
+ 06a5275d95efd1e65f6eec85d10bf549c635428f76f0b1f1bbb83d1a47b61cd2 9227 main/binary-armhf/Packages
+ d2f24498d4bc6d2c4a99efd440bb5089e5c066c9cad60d2b6a0fec908cb45be5 2369 main/binary-armhf/Packages.gz
  16deac074c65676aa7e15f80bc4cda1d7e33467ce08279371512b46f1ce35af8 193 main/binary-armhf/Release
  c208c3dffb797b4104abf212f00f5568b90fa79eb42ee3b38a2aa9714ff42783 2534 main/binary-armel/Packages
  4ccd49104f6db2920d2aa0cc925f1a4522a821527e38e5d71c231127995f40ac 1113 main/binary-armel/Packages.gz
@@ -114,17 +114,17 @@ SHA256:
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1
 
-iQIcBAEBAgAGBQJVufjlAAoJEIcMUo536HsdNZwQAKdsKo/yTDplQPPKgZlTGPOk
-7X82im82S7hRzcWGeCw9AZFIuaMqI1p1oGHf9NVd9QH6gjV/vVk3guvowNvtOZeJ
-NfPRZ7sb5FR8MVfKjYLfqRBMNuKsKrC6pQqug7IsuMR/RoOAzrvJ4kMdwT3DerbJ
-AitB4cjbTzyldy69De2gOdU8TcC4qehJLmFnwZqB3EekxDzCtrxnug8pUZFnRAFX
-ONWZttRLjdtg5497JNmqe7HDD0e1cmhjD28WXA95wPuKLDLG1BmI+62f+tbB1+VH
-byumTTi3V2YyAe08BLMIb2KTcaigXQNDcsBPdr+ioQwHG4PzCd8ZMMSEi+aDCkc3
-nLuqD5R99ddmnuPRU+P4cCfEm5mpC/4VediihBzROXlU2lZlDQC1YyIyCaUJH9ZK
-P/OEY3qOG5Il4kW/t7SVZ1MnxPRyH451nlz4NWNl0suNmlQHJoeU6aYSY7YqdziS
-6esQFm3eB448ytoqf8CCup2EmAMLFjJoxdlLMiEd4cD/FZv0ZDsZi46Vnf8m1YX2
-SX6TPeCKik90Iph/8tlZDrah1EGkVUYxJC/YeTg8sGFyrosceebHUNlm0/4RafiA
-LtSoivajIEbK29QKfRdY5PqeysfhOX52GdVnC+JLC+LyM4poYA+5mV4hr6QHf4aw
-br6OEd1/TVSA8Zn3lSLO
-=kHFQ
+iQIcBAEBAgAGBQJVv2q1AAoJEIcMUo536Hsd3bwP/10fc5JPmnuAk7iExMMSEMHk
+CiVGb6Fy3mxCZhoUcFBY8st0nUeHJg9M6GCp5zYLli0f/my1Udje365lGYs9zG8+
+6wHPmse1hzKSWwLm3r/iisNy8IQxwkJfgYrQDN8lQt+1kUUI+KWXyOW0YJDdmdwk
+5h1Uhrqm01uVIkJpZKdPd4qY8eqCP0+JdzgqLsHVj5R4qmdJwMbNUIyh4lXpXqJh
+2nfUyrMaAtJifu5uyCwffixGgEc2x6zONjzMtaZac+b+1D/VKa/c3pbhBUxPrgll
+iG+0DstzHKcsS1jdmFwluFJ/HgGkwHPokzDlssL+T5262LIhRdgCkybGBhc+A5t4
+9/jJv3KDQMztV/FiZWFSlYnLkz6NCe3kHE61fmKYgcEM8rZkpUAmFdRbq9HyTy9o
+PTATAnZUaobGTUDg2Govk4Nxxj5EVnNZxonRqAucHRWhTFe1jB//8XFaISC50cL5
+Xx7XGp5l1DfaO8V8mWa6i4/1mcgGlX++Sg/uj3pRreFfDLHyy8cG9+HVXnWcQwlm
+eA51PmIO9QhY8GPLByTF6NQ4pB4rFsxEIz18QtGmcf7tP+1lsdtjC895Lydg5LLb
+DFj4UiG7i5xKYVH7rfvgMfrzcVNd1p1qDXOdFuxRIdgCoDE1UUkQ6YAX+alosXJm
+ny50B8naNq/iiZ/iV+1u
+=X6IS
 -----END PGP SIGNATURE-----
