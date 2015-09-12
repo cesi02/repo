@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+set -e
+[ "${TRAVIS_PULL_REQUEST}" = "false" && "${TRAVIS_BRANCH}" = "newdeb" ] && {
+# Setup git
+git clone https://${GH_TOKEN}@github.com/danog/repo.git out
+git config --global user.name "${GIT_NAME}"
+git config --global user.email "${GIT_EMAIL}"
+git config --global push.default simple
+gitsync() {
+branch="${1}"
+shift
+echo "branches:
+  except:
+    - ${branch}" > .travis.yml
+
+git add -A
+git commit -am "${*}"
+git push -f origin $branch
+
+}
+cd out
+mkdir ../debs ../temp
+git clone https://github.com/jffrymrtn/clean
+rm clean/_posts/*
+# Copy new debs into temporary dir and rm them.
+git checkout newdeb
+cp *.deb ../debs
+rm -R *.deb
+gitsync newdeb OK
+
+# Import debs into reprepro
+git checkout reprepro
+for f in ../debs/*deb; do name="dpkg --info $f | grep Package | sed 's/.*Package:\s//'"; reprepro remove lenny $name && reprepro includedeb lenny $f; total="$total, $f";done
+tree  -T "Daniil's repo" -C -H http://repo.daniil.it -o tree.html
+cp -a * ../temp
+gitsync reprepro "Added/Updated $total"
+
+# Generate website
+git checkout master
+cp Readme.md ../clean/_posts
+cd ../clean
+echo repo.daniil.it >CNAME
+echo "name: Daniil's repo
+markdown: redcarpet
+highlighter: pygments
+url: http://repo.daniil.it
+paginate: 1
+paginate_path: \"/:num\"
+baseurl:">_config.yml
+bundle exec jekyll build
+cp -a _site/* ../temp
+cd ../old
+# Upload everything
+git checkout --orphan gh-pages
+git rm -rf .
+cp -a ../temp/* .
+touch .nojekyll
+gitsync gh-pages "Added/updated $total"
+
+}
