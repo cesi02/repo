@@ -9,7 +9,7 @@ git config --global push.default simple
 gitsync() {
 branch="${1}"
 shift
-echo "branches:
+[ "${branch}" != "newdeb" ] && echo "branches:
   except:
     - ${branch}" > .travis.yml
 

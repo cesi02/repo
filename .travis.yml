@@ -1,4 +1,16 @@
-branches:
-  except:
-    - master
-    - gh-pages
+language: language: ruby
+rvm:
+  - 2.1
+
+addons:
+  apt:
+    packages:
+    - reprepro
+    - grep
+    - sed
+
+script: . ./script/cibuild 
+
+env:
+  global:
+    secure: 
