@@ -5,7 +5,7 @@ rvm:
 addons:
   apt:
     packages:
-    - reprepro
+    - build-essential
     - grep
     - sed
 

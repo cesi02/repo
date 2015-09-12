@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 set -e
-[ "${TRAVIS_PULL_REQUEST}" = "false" && "${TRAVIS_BRANCH}" = "newdeb" ] && {
+[ "${TRAVIS_PULL_REQUEST}" = "false" ] && [ "${TRAVIS_BRANCH}" = "newdeb" ] && {
 # Setup git
+git clone git://git.debian.org/mirrorer/reprepro.git reprepro
+cd reprepro
+./configure --prefix=/usr && make && sudo make install
+cd ../
 git clone https://${GH_TOKEN}@github.com/danog/repo.git out
 git config --global user.name "${GIT_NAME}"
 git config --global user.email "${GIT_EMAIL}"
